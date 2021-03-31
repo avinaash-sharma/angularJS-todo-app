@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="todo.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"
+    ></script>
+    <title>AngularJS Todo</title>
+  </head>
+  <body>
+    <div class="main" ng-app="myList" ng-controller="myController">
+        <h1>Todo List App</h1>    
+        <div class="search">
+          <input type="text" placeholder="Add Todo" ng-model="addData">
+          <span ng-click="addItem()"><i class="fas fa-plus"></i></span>
+        </div>
+        <ul>
+          <li ng-repeat="x in products">{{x}}<i ng-click="removeItem($index)" class="fas fa-trash-alt"></i></li>
+        </ul>
+        <p>{{errortext}}</p>
+    </div>
+    
+    <script type="text/javascript" src="index.js">
+      
+    </script>
+  </body>
+</html>
